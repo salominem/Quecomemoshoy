@@ -41,7 +41,7 @@
 
     <!-- Overlay de Carga -->
     <div id="loading-overlay" class="fixed inset-0 z-[100] bg-slate-100 flex flex-col items-center justify-center gap-4">
-        <div class="w-14 h-14 border-4 border-amber-500/20 border-t-amber-500 rounded-full spinner"></div>
+        <div class="w-14 h-14 border-4 border-red-500/20 border-t-red-500 rounded-full spinner"></div>
         <p class="text-slate-500 font-semibold text-sm tracking-wide">Cargando menú...</p>
     </div>
 
@@ -49,14 +49,14 @@
     <header class="bg-white/90 backdrop-blur-md border-b border-slate-200/80 text-slate-900 p-4 sticky top-0 z-30 shadow-sm">
         <div class="max-w-md mx-auto flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-amber-500/10 border border-amber-500/20 rounded-2xl flex items-center justify-center text-2xl shadow-inner">
-                    🍔
+                <div class="w-10 h-10 rounded-2xl overflow-hidden shadow-inner bg-white border border-slate-200">
+                    <img src="data:image/jpeg;base64,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" alt="Logo ¿Que comemos hoy?" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h1 class="text-xl font-extrabold tracking-tight text-slate-900 flex items-center gap-2">
-                        ¿Que comemos hoy? <span class="bg-amber-500 text-slate-950 text-[10px] uppercase font-black px-1.5 py-0.5 rounded-md">Food</span>
+                        ¿Que comemos hoy? <span class="bg-red-500 text-slate-950 text-[10px] uppercase font-black px-1.5 py-0.5 rounded-md">Food</span>
                     </h1>
-                    <p class="text-xs text-amber-600 font-semibold">Menú & Pedidos online</p>
+                    <p class="text-xs text-red-600 font-semibold">Menú & Pedidos online</p>
                 </div>
             </div>
             <button onclick="toggleMenu()" class="w-10 h-10 rounded-2xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 flex items-center justify-center text-lg transition active:scale-95" aria-label="Abrir menú">
@@ -75,10 +75,10 @@
                 </div>
                 <div id="auth-section" class="space-y-2">
                     <button id="btn-login-modal" onclick="openLoginModal()" class="w-full text-left py-3 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200 font-medium flex items-center gap-3 transition">
-                        <i class="fa-solid fa-lock text-amber-500"></i> Acceso Dueño
+                        <i class="fa-solid fa-lock text-red-500"></i> Acceso Dueño
                     </button>
-                    <button id="btn-admin-panel" onclick="openAdminModal()" class="hidden w-full text-left py-3 px-4 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 text-amber-700 border border-amber-500/30 font-semibold flex items-center gap-3 transition">
-                        <i class="fa-solid fa-sliders text-amber-500"></i> Panel de Control
+                    <button id="btn-admin-panel" onclick="openAdminModal()" class="hidden w-full text-left py-3 px-4 rounded-xl bg-red-500/10 hover:bg-red-500/20 text-red-700 border border-red-500/30 font-semibold flex items-center gap-3 transition">
+                        <i class="fa-solid fa-sliders text-red-500"></i> Panel de Control
                     </button>
                 </div>
             </div>
@@ -101,9 +101,9 @@
         <div class="bg-white border border-slate-200/80 p-5 rounded-3xl shadow-sm space-y-4">
             <div class="flex justify-between items-center border-b border-slate-100 pb-3">
                 <h2 class="text-base font-bold text-slate-900 flex items-center gap-2.5">
-                    <i class="fa-solid fa-basket-shopping text-amber-500"></i> Tu Pedido
+                    <i class="fa-solid fa-basket-shopping text-red-500"></i> Tu Pedido
                 </h2>
-                <span class="bg-amber-500/10 text-amber-700 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-500/20" id="cart-count">0 ítems</span>
+                <span class="bg-red-500/10 text-red-700 text-xs font-bold px-2.5 py-1 rounded-full border border-red-500/20" id="cart-count">0 ítems</span>
             </div>
             
             <div id="cart-items" class="divide-y divide-slate-100 text-sm space-y-2">
@@ -112,24 +112,24 @@
             
             <div id="cart-total-container" class="hidden border-t border-slate-100 pt-3 flex justify-between items-center font-bold text-base text-slate-900">
                 <span class="text-slate-500 text-sm">Total del pedido:</span>
-                <span id="cart-total" class="text-amber-600 text-xl font-extrabold">$0</span>
+                <span id="cart-total" class="text-red-600 text-xl font-extrabold">$0</span>
             </div>
         </div>
 
         <!-- Formulario Envío -->
         <div class="bg-white border border-slate-200/80 p-5 rounded-3xl shadow-sm space-y-3.5">
             <h2 class="text-base font-bold text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-location-dot text-amber-500"></i> Datos para el Envío
+                <i class="fa-solid fa-location-dot text-red-500"></i> Datos para el Envío
             </h2>
-            <input type="text" id="client-name" placeholder="Tu Nombre completo" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-amber-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none transition">
-            <input type="text" id="client-address" placeholder="Dirección de entrega (Ej: San Martín 123)" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-amber-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none transition">
+            <input type="text" id="client-name" placeholder="Tu Nombre completo" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-red-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none transition">
+            <input type="text" id="client-address" placeholder="Dirección de entrega (Ej: San Martín 123)" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-red-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none transition">
             <!-- SELECTOR DE MÉTODO DE PAGO -->
-            <select id="client-payment-method" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-amber-500 text-slate-700 transition-colors">
+            <select id="client-payment-method" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-red-500 text-slate-700 transition-colors">
                 <option value="" disabled selected>Selecciona Forma de Pago</option>
                 <option value="Efectivo">💵 Efectivo</option>
                 <option value="Transferencia">💳 Transferencia</option>
             </select>
-            <textarea id="client-notes" placeholder="Aclaraciones (Ej: Abonaré con Transferencia / Paga con $10.000)" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-amber-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none h-20 resize-none transition"></textarea>
+            <textarea id="client-notes" placeholder="Aclaraciones (Ej: Abonaré con Transferencia / Paga con $10.000)" class="w-full p-3.5 bg-slate-50 border border-slate-200 focus:border-red-500/80 focus:bg-white rounded-2xl text-sm text-slate-900 placeholder:text-slate-400 outline-none h-20 resize-none transition"></textarea>
             
             <button onclick="sendOrderWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-2xl shadow-lg shadow-emerald-600/20 active:scale-[0.99] transition flex justify-center items-center gap-2.5 text-sm">
                 <i class="fa-brands fa-whatsapp text-xl"></i> Enviar Pedido por WhatsApp
@@ -141,11 +141,11 @@
     <div id="modal-login" class="hidden fixed inset-0 z-50 bg-slate-950/50 backdrop-blur-sm flex items-center justify-center p-4">
         <div class="bg-white border border-slate-200 rounded-3xl p-6 w-full max-w-sm shadow-2xl space-y-4">
             <h3 class="font-bold text-lg text-slate-900">Acceso Dueño</h3>
-            <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 outline-none focus:border-amber-500">
-            <input type="password" id="login-pass" placeholder="Contraseña" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 outline-none focus:border-amber-500">
+            <input type="email" id="login-email" placeholder="Correo electrónico" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 outline-none focus:border-red-500">
+            <input type="password" id="login-pass" placeholder="Contraseña" class="w-full p-3.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 outline-none focus:border-red-500">
             <div class="flex gap-2 pt-2">
                 <button onclick="closeLoginModal()" class="w-1/2 py-3 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold text-xs">Cancelar</button>
-                <button onclick="login()" class="w-1/2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl text-xs transition shadow-md">Ingresar</button>
+                <button onclick="login()" class="w-1/2 bg-red-500 hover:bg-red-400 text-slate-950 font-bold py-3 rounded-xl text-xs transition shadow-md">Ingresar</button>
             </div>
         </div>
     </div>
@@ -158,15 +158,15 @@
                 <button onclick="closeAdminModal()" class="text-slate-400 hover:text-slate-700"><i class="fa-solid fa-xmark text-lg"></i></button>
             </div>
 
-            <button onclick="toggleCategoryManager()" class="w-full border border-slate-200 bg-slate-50 hover:bg-slate-100 text-amber-700 font-semibold py-2.5 rounded-xl text-xs flex justify-center items-center gap-2 transition">
+            <button onclick="toggleCategoryManager()" class="w-full border border-slate-200 bg-slate-50 hover:bg-slate-100 text-red-700 font-semibold py-2.5 rounded-xl text-xs flex justify-center items-center gap-2 transition">
                 <i class="fa-solid fa-folder-plus"></i> Gestionar Categorías
             </button>
 
             <div id="category-manager-section" class="hidden p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
-                <h5 class="font-bold text-xs text-amber-600 uppercase tracking-wider">Categorías del Menú</h5>
+                <h5 class="font-bold text-xs text-red-600 uppercase tracking-wider">Categorías del Menú</h5>
                 
                 <div class="flex gap-2">
-                    <input type="text" id="new-cat-name" placeholder="Nueva categoría..." class="w-full p-2.5 bg-white border border-slate-200 rounded-xl text-xs outline-none text-slate-900 focus:border-amber-500">
+                    <input type="text" id="new-cat-name" placeholder="Nueva categoría..." class="w-full p-2.5 bg-white border border-slate-200 rounded-xl text-xs outline-none text-slate-900 focus:border-red-500">
                     <button onclick="addCategory()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-3.5 py-2.5 rounded-xl text-xs whitespace-nowrap">
                         + Agregar
                     </button>
@@ -177,33 +177,33 @@
 
             <form id="product-form" onsubmit="saveProduct(event)" class="space-y-3 border-b border-slate-100 pb-5">
                 <h4 id="form-title" class="font-bold text-sm text-slate-900 flex items-center gap-1.5">
-                    <i class="fa-solid fa-plus text-amber-500"></i> Nuevo Producto
+                    <i class="fa-solid fa-plus text-red-500"></i> Nuevo Producto
                 </h4>
                 
                 <input type="hidden" id="prod-id">
-                <input type="text" id="prod-nombre" placeholder="Nombre del producto" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none text-slate-900 focus:border-amber-500">
+                <input type="text" id="prod-nombre" placeholder="Nombre del producto" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none text-slate-900 focus:border-red-500">
                 
                 <div class="grid grid-cols-2 gap-2">
                     <div>
-                        <select id="prod-categoria" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none font-medium text-slate-800 cursor-pointer focus:border-amber-500"></select>
+                        <select id="prod-categoria" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none font-medium text-slate-800 cursor-pointer focus:border-red-500"></select>
                     </div>
                     <div>
-                        <input type="number" id="prod-precio" min="0" placeholder="Precio ($)" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none text-slate-900 focus:border-amber-500">
+                        <input type="number" id="prod-precio" min="0" placeholder="Precio ($)" required class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm outline-none text-slate-900 focus:border-red-500">
                     </div>
                 </div>
 
-                <textarea id="prod-descripcion" placeholder="Descripción (ingredientes, tamaño...)" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm h-16 resize-none outline-none text-slate-900 focus:border-amber-500"></textarea>
+                <textarea id="prod-descripcion" placeholder="Descripción (ingredientes, tamaño...)" class="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm h-16 resize-none outline-none text-slate-900 focus:border-red-500"></textarea>
 
                 <div class="space-y-2">
                     <div class="flex justify-between items-center">
                         <label class="text-xs font-semibold text-slate-500">Agregados / Extras</label>
-                        <button type="button" onclick="addExtraInput()" class="text-xs text-amber-600 hover:underline font-medium">+ Agregar Extra</button>
+                        <button type="button" onclick="addExtraInput()" class="text-xs text-red-600 hover:underline font-medium">+ Agregar Extra</button>
                     </div>
                     <div id="extras-inputs-container" class="space-y-2"></div>
                 </div>
 
                 <div class="flex gap-2 pt-2">
-                    <button type="submit" id="btn-submit-product" class="flex-1 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-3 rounded-xl text-xs transition shadow-md">
+                    <button type="submit" id="btn-submit-product" class="flex-1 bg-red-500 hover:bg-red-400 text-slate-950 font-bold py-3 rounded-xl text-xs transition shadow-md">
                         Guardar Producto
                     </button>
                     <button type="button" id="btn-cancel-edit" onclick="resetForm()" class="hidden bg-slate-100 text-slate-700 font-semibold px-4 py-3 rounded-xl text-xs">
@@ -368,7 +368,7 @@
                                 ${p.extras.map((ex, idx) => `
                                     <label class="flex items-center justify-between p-2.5 bg-slate-50 hover:bg-slate-100/80 rounded-2xl cursor-pointer text-xs transition border border-slate-200/60">
                                         <div class="flex items-center gap-2.5">
-                                            <input type="checkbox" onchange="updateCardTotal(${p.id})" data-extra-idx="${idx}" class="product-extra-cb-${p.id} w-4 h-4 rounded text-amber-500 focus:ring-0 bg-white border-slate-300 cursor-pointer">
+                                            <input type="checkbox" onchange="updateCardTotal(${p.id})" data-extra-idx="${idx}" class="product-extra-cb-${p.id} w-4 h-4 rounded text-red-500 focus:ring-0 bg-white border-slate-300 cursor-pointer">
                                             <span class="font-medium text-slate-700">${ex.nombre}</span>
                                         </div>
                                         <span class="font-bold text-slate-900">+$${ex.precio}</span>
@@ -378,9 +378,9 @@
                         </div>
                     ` : ''}
 
-                    <input type="text" id="note-input-${p.id}" placeholder="Nota (Ej: Como quiere su pedido...)" class="w-full p-3 bg-slate-50 border border-slate-200/80 focus:bg-white rounded-2xl text-xs text-slate-900 placeholder:text-slate-400 outline-none focus:border-amber-500/80 transition">
+                    <input type="text" id="note-input-${p.id}" placeholder="Nota (Ej: Como quiere su pedido...)" class="w-full p-3 bg-slate-50 border border-slate-200/80 focus:bg-white rounded-2xl text-xs text-slate-900 placeholder:text-slate-400 outline-none focus:border-red-500/80 transition">
 
-                    <button onclick="addCardToCart(${p.id})" class="w-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white font-bold py-3.5 rounded-2xl shadow-sm transition-all duration-200 text-xs flex justify-between items-center px-4 active:scale-[0.98]">
+                    <button onclick="addCardToCart(${p.id})" class="w-full bg-slate-900 hover:bg-red-500 hover:text-slate-950 text-white font-bold py-3.5 rounded-2xl shadow-sm transition-all duration-200 text-xs flex justify-between items-center px-4 active:scale-[0.98]">
                         <span>+ Agregar al pedido</span>
                         <span class="font-black" id="btn-price-${p.id}">$${p.precio}</span>
                     </button>
@@ -468,7 +468,7 @@
                 <div class="py-3 flex justify-between items-start gap-3">
                     <div class="space-y-0.5">
                         <p class="font-bold text-slate-900 text-xs">${item.nombre}</p>
-                        ${item.extras.length > 0 ? `<p class="text-[11px] text-amber-700 font-medium">+ ${item.extras.map(e => e.nombre).join(', ')}</p>` : ''}
+                        ${item.extras.length > 0 ? `<p class="text-[11px] text-red-700 font-medium">+ ${item.extras.map(e => e.nombre).join(', ')}</p>` : ''}
                         ${item.nota ? `<p class="text-[11px] text-slate-500 italic">Nota: "${item.nota}"</p>` : ''}
                         <p class="text-xs font-black text-slate-900 mt-1">$${item.precioTotal}</p>
                     </div>
@@ -511,7 +511,7 @@
             }
 
             // Encabezado
-            let text = `*NUEVO PEDIDO - NALDO*\n\n`;
+            let text = `*NUEVO PEDIDO - QUE COMEMOS HOY*\n\n`;
             text += `*Cliente:* ${name}\n`;
             text += `*Dirección:* ${address}\n`;
             text += `*Método de Pago:* ${paymentMethod}\n`;
@@ -544,8 +544,8 @@
             const div = document.createElement('div');
             div.className = "flex gap-2 items-center extra-row";
             div.innerHTML = `
-                <input type="text" placeholder="Extra (ej: Doble Cheddar)" value="${valName}" class="extra-name w-2/3 p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 outline-none focus:border-amber-500">
-                <input type="number" placeholder="Precio" min="0" value="${valPrice}" class="extra-price w-1/3 p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 outline-none focus:border-amber-500">
+                <input type="text" placeholder="Extra (ej: Doble Cheddar)" value="${valName}" class="extra-name w-2/3 p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 outline-none focus:border-red-500">
+                <input type="number" placeholder="Precio" min="0" value="${valPrice}" class="extra-price w-1/3 p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-900 outline-none focus:border-red-500">
                 <button type="button" onclick="this.parentElement.remove()" class="text-red-500 hover:text-red-600 text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
             `;
             container.appendChild(div);
@@ -605,7 +605,7 @@
                 product.extras.forEach(ex => addExtraInput(ex.nombre, ex.precio));
             }
 
-            document.getElementById('form-title').innerHTML = `<i class="fa-solid fa-pen-to-square text-amber-500"></i> Editar Producto`;
+            document.getElementById('form-title').innerHTML = `<i class="fa-solid fa-pen-to-square text-red-500"></i> Editar Producto`;
             document.getElementById('btn-submit-product').innerText = "Actualizar Producto";
             document.getElementById('btn-cancel-edit').classList.remove('hidden');
         }
@@ -614,7 +614,7 @@
             document.getElementById('product-form').reset();
             document.getElementById('prod-id').value = '';
             document.getElementById('extras-inputs-container').innerHTML = '';
-            document.getElementById('form-title').innerHTML = `<i class="fa-solid fa-plus text-amber-500"></i> Nuevo Producto`;
+            document.getElementById('form-title').innerHTML = `<i class="fa-solid fa-plus text-red-500"></i> Nuevo Producto`;
             document.getElementById('btn-submit-product').innerText = "Guardar Producto";
             document.getElementById('btn-cancel-edit').classList.add('hidden');
         }
@@ -634,11 +634,11 @@
             list.innerHTML = products.map(p => `
                 <div class="py-2.5 flex justify-between items-center text-slate-700">
                     <div>
-                        <p class="font-bold text-slate-900 text-xs">${p.nombre} <span class="text-[11px] font-semibold text-amber-600">($${p.precio})</span></p>
+                        <p class="font-bold text-slate-900 text-xs">${p.nombre} <span class="text-[11px] font-semibold text-red-600">($${p.precio})</span></p>
                         <p class="text-[10px] text-slate-400">${p.categoria}</p>
                     </div>
                     <div class="flex gap-2">
-                        <button onclick="editProduct(${p.id})" class="text-amber-600 hover:text-amber-700 text-xs p-1">
+                        <button onclick="editProduct(${p.id})" class="text-red-600 hover:text-red-700 text-xs p-1">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </button>
                         <button onclick="deleteProduct(${p.id})" class="text-red-500 hover:text-red-600 text-xs p-1">
