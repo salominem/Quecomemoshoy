@@ -359,7 +359,7 @@
                 const hasExtras = p.extras && Array.isArray(p.extras) && p.extras.length > 0;
                 return `
                 <div class="bg-white border border-slate-200/80 p-5 rounded-3xl shadow-sm space-y-4 transition hover:shadow-md hover:border-slate-300" id="product-card-${p.id}">
-                    ${p.imagen_url ? `<img src="${p.imagen_url}" alt="${p.nombre}" class="w-full h-40 object-cover rounded-2xl">` : ''}
+                    ${p.imagen_url ? `<img src="${p.imagen_url}" alt="${p.nombre}" class="w-full aspect-square object-cover rounded-2xl">` : ''}
                     <div class="flex justify-between items-start gap-3">
                         <div class="space-y-1">
                             <span class="text-[10px] font-bold tracking-wider text-emerald-700 uppercase bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">${p.categoria}</span>
